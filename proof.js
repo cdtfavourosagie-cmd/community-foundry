@@ -14,7 +14,7 @@
   var url = cfg.SUPABASE_URL + '/rest/v1/testimonials' +
     '?select=id,name,title,quote,photo_url' +
     '&show_on=cs.%7B' + encodeURIComponent(site) + '%7D' +
-    '&order=created_at.desc&limit=100';
+    '&order=position.asc.nullslast,created_at.desc&limit=100';
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
